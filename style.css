@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  border-radius: 5px;
+  margin: 8px;
+}
+
+.ui {
+  width: 25vw;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
+  padding: 4%;
+}
+
+.list-content {
+  max-height: 10rem;
+}
+
+.guess, .select {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.guess {
+  padding: 4%;
+  flex-direction: column;
+}
+
+.guess .num,
+.guess .select,
+.guess .submit {
+  width: 90%;
+  padding: 4%;
+}
+
+.radio {
+  position: sticky;
+  height: 25px;
+  width: 25px;
+  padding: 1%;
+}
+
+.text {
+  margin: 4%;
+}
+
+.container {
+  max-width: 74vw;
+  transform: translateX(24vw);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.item {
+  font-weight: 900;
+  font-size: x-large;
+  text-align: center;
+  margin: 3px;
+  padding: 8px;
+  color: white;
+  background-color: darkslategrey;
+  border-radius: 10px;
+  min-width: 12vw;
+}
+
+.item-invisible {
+  display: none;
+}
+
+@media screen and (max-width:600px) {
+  body {
+    flex-direction: column;
+  }
+
+  .ui {
+    position: relative;
+    width: 100vw;
+    flex-direction: row;
+  }
+
+  .container {
+    max-width: 100vw;
+    transform: translateX(0);
+  }
+
+  .guess {
+    width: 50vw;
+  }
+
+  .list {
+    max-width: 50vw;
+  }
+}
